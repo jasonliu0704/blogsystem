@@ -1,35 +1,38 @@
 /* code listing for blog/css/blog.css */
+/*style for editor */
 form#editor{
-width: 300px;
+width: 625px;
 margin:0px;
 padding:0px;
 }
 
-orm#editor label, form#editor input[type='text']{
+form#editor label, form#editor input[type='text']{
 display:block;
 }
 
-frm#editor #editor-buttons{
+form#editor #editor-buttons{
 border:none;
 text-align:right;
 }
 
-fom#editor textarea, form#editor input[type='text']{
+form#editor textarea, form#editor input[type='text']{
 width:90%;
 margin-bottom:2em;
 }
 
-for#editor textarea{
+form#editor textarea{
 height:10em;
 }
 
+/*style for comment*/
+
 form#comment-form{
-  margin-top:2em;
-  padding-top: 0.7em;
-  border-top:1px solid grey;
+margin-top:2em;
+padding-top: 0.7em;
+border-top:1px solid grey;
 }
 
 form#comment-form label, form#comment-form input[type='submit']{
-  padding-top:0.7em;
-  display: block;
+padding-top:0.7em;
+display:block;
 }

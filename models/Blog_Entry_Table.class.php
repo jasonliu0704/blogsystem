@@ -21,7 +21,6 @@ class Blog_Entry_Table extends Table{
     return $this->makeStatement($sql);
   }
 
-
   public function getEntry($id){
     $sql = "SELECT entry_id, title, entry_text, date_created
             FROM blog_entry
@@ -33,9 +32,18 @@ class Blog_Entry_Table extends Table{
   }
 
   public function deleteEntry($id){
+    //delete comment associated with this entry first
+    $this->deleteCommentsByEntry($id);
     $sql = "DELETE FROM blog_entry WHERE entry_id = ?";
     $data = array($id);
     $statement = $this->makeStatement($sql, $data);
+  }
+
+  public function deleteCommentsByEntry($id){
+    //create comment Table and delete comments
+    include_once "models/Comment_Table.class.php";
+    $commentsTable = new Comment_Table($this->db);
+    $commentsTable->deleteCommentsByEntry($id);
   }
 
   public function updateEntry($id, $title, $entry){

@@ -11,6 +11,7 @@ if(isset($_POST['search-term'])){
   if(empty($searchTerm)){
     return "<h1>You haven't searched for anything yet!</h1>";
   }
+
   //get search object from table
   $searchData = $blogTable->searchEntry($searchTerm);
   //display search entry through search-results-html
