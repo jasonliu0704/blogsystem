@@ -6,7 +6,10 @@ ini_set("display_errors", 1);
 include_once "models/Page_Data.class.php";
 $pageData = new Page_Data();
 $pageData->title = "PHP/MYSQL blog";
-$pageData->addCSS("css/blog.css");
+//$pageData->addCSS("css/blog.css");
+//$pageData->addCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+//$pageData->addCSS("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css");
+//$pageData->addScript("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js");
 
 $dbInfo = "mysql:host=localhost;dbname=simple_blog";
 $dbUser = "root";
@@ -24,8 +27,10 @@ if($pageRequested){
     $controller = "search";
   }
 }
-//load search controller
-$pageData->content .= include_once "views/search-form-html.php";
+//load search controller and nav
+$pageData->content .= include_once "views/blog-navigation-html.php";
+//$pageData->content .= include_once "views/search-form-html.php";
+
 
 //choose which controller to display
 $pageData->content .= include_once "controllers/$controller.php";

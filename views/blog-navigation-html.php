@@ -1,5 +1,6 @@
 <?php
-return "
+return
+"
 <nav class='navbar navbar-inverse narbar-fixed-top'>
         <div class='container-fluid'>
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,17 +19,16 @@ return "
             <div id='navbar' class='collapse navbar-collapse'>
                 <ul class='nav navbar-nav navbar-right'>
                     <li>
-                        <a href='admin.php?page=entries'>All entries</a>
-
+                        <a href='index.php'>Blog</a>
                     </li>
                     <li>
-						<a href='admin.php?page=editor'>Editor</a>
+                        <a href='about.html'>About</a>
                     </li>
                     <li>
-						<a href='admin.php?page=images'>Image manager</a>
+                        <a href='admin.php'>Manage</a>
                     </li>
                     <li>
-						<a href='admin.php?page=users'>Register</a>
+                        <a href='contact.html'>Contact</a>
                     </li>
                 </ul>
             
@@ -43,4 +43,4 @@ return "
     </div>
         <!-- /.container -->
 </nav>
-":
+";

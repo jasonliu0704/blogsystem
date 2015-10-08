@@ -4,7 +4,6 @@ $searchDataFound = isset($searchData);
 if($searchDataFound === false){
   trigger_error('views/search-results-html.php needs $searchData');
 }
-
 $searchHTML = "<section id='search'><p>
               You searched for <em>$searchTerm</em></p><ul>";
 

@@ -15,6 +15,7 @@ if(isset($_POST['search-term'])){
   //get search object from table
   $searchData = $blogTable->searchEntry($searchTerm);
   //display search entry through search-results-html
+
   $searchView = include_once "views/search-results-html.php";
 }
 return $searchView;
